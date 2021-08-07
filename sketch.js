@@ -6,10 +6,11 @@ function preload(){
   backgroundImage = loadImage("background0.png");
   arrowImage = loadImage("arrow0.png");
   bowImage = loadImage("bow0.png");
+  //correcttion done
   red_balloonImage = loadImage("red_balloon0.png");
-  green_balloonImage = loadImage("green_ballon0.png")
-  pink_balloonImage = loadImage("pink_ballon0.png")
-  blue_balloonImage = loadImage("blue_ballon0.png")
+  green_balloonImage = loadImage("green_balloon0.png")
+  pink_balloonImage = loadImage("pink_balloon0.png")
+  blue_balloonImage = loadImage("blue_balloon0.png")
 
 }
 
@@ -46,9 +47,9 @@ function draw() {
     createArrow();
     
   }
-  
+  //correction done
   //creating continous balloons
-  var select_balloon = Math.round(random(1,1));
+  var select_balloon = Math.round(random(1,4));
   
   if (World.frameCount % 100 == 0) {
     if (select_balloon == 1) {
@@ -61,11 +62,7 @@ function draw() {
       pinkBalloon();
     }
   }
-  redBalloon();
-  greenBalloon();
-  blueBalloon();
-  pinkBalloon();
-  createArrow();
+  //correction done
   drawSprites();
   text("score:"+ score,270,30);
   textSize(20);
@@ -117,5 +114,5 @@ function pinkBalloon() {
   pink.addImage(pink_balloonImage);
   pink.velocityX = 3;
   pink.lifetime = 150;
-  pink.scale = 0.1;
+ 
 }
